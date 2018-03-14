@@ -11,7 +11,6 @@ socketio = SocketIO(async_mode=async_mode)
 def create_app():
     app = Flask(__name__)
     app.config.from_object('config')
-    socketio.init_app(app)
 
     # Blueprints registration
     from app.api import api_bp
@@ -20,7 +19,7 @@ def create_app():
     from app.ui import ui
     app.register_blueprint(ui)
 
-    from app.rt import real_time_events
-    app.register_blueprint(real_time_events)
+    from app.rt import events
+    socketio.init_app(app)
 
     return app
