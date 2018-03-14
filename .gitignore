@@ -1,0 +1,18 @@
+# Folder view configuration files
+*.DS_Store
+Desktop.ini
+.idea
+__pycache__
+instance
+env
+
+# Thumbnails
+._*
+Thumbs.db
+
+# Compiled Python files
+*.pyc
+
+# Celery beat management
+celerybeat.pid
+celerybeat-schedule*
